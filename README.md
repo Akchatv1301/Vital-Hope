@@ -1,2 +1,2 @@
-# Vital-Hope
+# VitalHope
 Medical Emergency Platform

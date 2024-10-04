@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "start:dev": "webpack serve --open --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,12 @@
     "express": "^4.21.0",
     "method-override": "^3.0.0",
     "mongoose": "^8.7.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "agora-rtc-sdk-ng": "latest"
+  },
+  "devDependencies": {
+      "webpack": "5.91.0",
+      "webpack-dev-server": "5.0.4",
+      "webpack-cli": "5.1.4"
   }
 }

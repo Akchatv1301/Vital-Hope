@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Hope - Emergency Assistance</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="location-info">
+                <div class="location-icon">⚡</div>
+                <div class="location-text">
+                    <span class="location-label">Current location</span>
+                    <span class="location-value">4th Mound road, California</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <i class="fas fa-camera"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <h1>VITAL HOPE</h1>
+            <p class="subtitle">Press the SOS button, your live location will be shared with the nearest help centre and your emergency contacts</p>
+
+            <!-- Emergency Button -->
+            <div class="emergency-button-container">
+                <button id="emergencyButton" class="emergency-button">
+                    <span class="button-text">Emergency</span>
+                    <span class="button-subtext">Press 3 for second</span>
+                </button>
+                <div class="timer" id="timer"></div>
+            </div>
+
+            <!-- Emergency Categories -->
+            <section class="emergency-categories">
+                <h2>What's your emergency?</h2>
+                <div class="categories-grid">
+                    <button class="category-button">
+                        <span>🏥</span>
+                        <span>Heart Attack</span>
+                    </button>
+                    <button class="category-button">
+                        <span>🔥</span>
+                        <span>Fire</span>
+                    </button>
+                    <button class="category-button">
+                        <span>🌪</span>
+                        <span>Natural disaster</span>
+                    </button>
+                    <button class="category-button">
+                        <span>🚗</span>
+                        <span>Accident</span>
+                    </button>
+                    <button class="category-button">
+                        <span>💉</span>
+                        <span>Medical</span>
+                    </button>
+                    <button class="category-button">
+                        <span>🌊</span>
+                        <span>Drowning</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-button active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-button">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </button>
+            <button class="nav-button">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

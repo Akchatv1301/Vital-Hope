@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="/css/style1.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <button class="back-button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <h1>Profile Dashboard</h1>
+            <button class="notification-button">
+                <i class="fas fa-bell"></i>
+            </button>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-image">
+                <img src="<%= userData.profileImage %>" alt="<%= userData.name %>">
+            </div>
+            <h2 class="profile-name"><%= userData.name %></h2>
+            <p class="profile-handle">@<%= userData.handle %></p>
+        </section>
+
+        <!-- Medical Info Grid -->
+        <div class="medical-info-grid">
+            <div class="info-card">
+                <i class="fas fa-venus-mars"></i>
+                <div class="info-content">
+                    <h3>Gender</h3>
+                    <p><%= userData.gender %></p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-calendar"></i>
+                <div class="info-content">
+                    <h3>Age</h3>
+                    <p><%= userData.age %></p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-tint"></i>
+                <div class="info-content">
+                    <h3>Blood</h3>
+                    <p><%= userData.blood %></p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-allergies"></i>
+                <div class="info-content">
+                    <h3>Allergy</h3>
+                    <p><%= userData.allergy || 'None' %></p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-notes-medical"></i>
+                <div class="info-content">
+                    <h3>Condition</h3>
+                    <p><%= userData.condition || 'None' %></p>
+                </div>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-pills"></i>
+                <div class="info-content">
+                    <h3>Medication</h3>
+                    <p><%= userData.medication || 'None' %></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medical History -->
+        <section class="history-section">
+            <h2>Medical History</h2>
+            <div class="doctors-list">
+                <% doctors.forEach(doctor => { %>
+                    <div class="doctor-item">
+                        <div class="doctor-info">
+                            <img src="<%= doctor.image %>" alt="<%= doctor.name %>">
+                            <span><%= doctor.name %></span>
+                        </div>
+                        <button class="view-button" data-id="<%= doctor.id %>">View</button>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+        <!-- Upcoming Appointments -->
+        <section class="appointments-section">
+            <h2>Upcoming Appointments</h2>
+            <div class="appointments-list">
+                <% appointments.forEach(appointment => { %>
+                    <div class="appointment-item">
+                        <div class="appointment-icon">
+                            <i class="far fa-calendar"></i>
+                        </div>
+                        <div class="appointment-details">
+                            <h3>Appointment with <%= appointment.doctorName %></h3>
+                            <p><%= appointment.type %> on <%= appointment.date %></p>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-button">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-button">
+                <i class="fas fa-compass"></i>
+                <span>Explore</span>
+            </button>
+            <button class="nav-button active">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="/js/profile.js"></script>
+</body>
+</html>

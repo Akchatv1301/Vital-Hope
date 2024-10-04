@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/profile', (req, res) => {
-    // This would typically come from a database
     const profileData = {
         userData: {
-            name: 'John Smith',
-            handle: 'johnsmith',
+            name: 'Hari Kumar Jena',
+            handle: 'hari_jain',
             profileImage: '/images/profile.jpg',
             gender: 'Male',
             age: '35',
@@ -18,25 +17,25 @@ router.get('/profile', (req, res) => {
         doctors: [
             {
                 id: 1,
-                name: 'Dr. Emily Johnson',
-                image: '/images/doctor1.jpg',
+                name: 'Dr. P. C. Dolai',
+                image: '/images/doctor.jpg',
                 specialty: 'Cardiology'
             },
             {
                 id: 2,
-                name: 'Dr. Michael Brown',
-                image: '/images/doctor2.jpg',
+                name: 'Dr. Asish Jain',
+                image: '/images/doctor.jpg',
                 specialty: 'Dermatology'
             }
         ],
         appointments: [
             {
-                doctorName: 'Dr. Emily Johnson',
+                doctorName: 'Dr. P. C. Dolai',
                 type: 'Cardiology Consultation',
                 date: '2023-10-15 at 10:00 AM'
             },
             {
-                doctorName: 'Dr. Michael Brown',
+                doctorName: 'Dr. Asish Jain',
                 type: 'Dermatology Check-up',
                 date: '2023-10-20 at 2:00 PM'
             }
